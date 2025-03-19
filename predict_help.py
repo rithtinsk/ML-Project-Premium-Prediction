@@ -87,7 +87,7 @@ def preprocess_input(input_dict):
             df['genetical_risk'] = value
 
     # Assuming the 'normalized_risk_score' needs to be calculated based on the 'age'
-    df['normalized_risk_score'] = calculate_normalized_risk(input_dict['Medical History'])
+    df['normalized_score'] = calculate_normalized_risk(input_dict['Medical History'])
     df = handle_scaling(input_dict['Age'], df)
 
     return df
